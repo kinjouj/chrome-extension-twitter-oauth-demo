@@ -1,0 +1,30 @@
+body {
+  font-size: 12px;
+}
+
+#twitter-login {
+  text-align: center;
+  margin: 20px;
+}
+
+#twitter-login > a {
+  background: #3588cc;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+#content {
+  width: 300px;
+  margin: 10px 10px;
+}
+
+#content > .tweet {
+  margin: 10px;
+}
+
+#content > .tweet > div {
+  margin: 5px;
+}
