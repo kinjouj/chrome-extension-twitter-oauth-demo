@@ -1,28 +1,17 @@
 (function(undefined) {
+  var loginFormElement = document.querySelector("#twitter-login");
+
   var bgPage = chrome.extension.getBackgroundPage();
   var twitter = bgPage.getTwitterAPI();
 
   if (twitter.isAuthenticated()) {
-    $('#twitter-login').remove();
+    var root = document.querySelector("#content");
+    root.removeChild(loginFormElement);
 
-    var contentRoot = $('#content');
-
-    twitter.fetchTimelines(function(tweets) {
-      tweets.forEach(function(tweet) {
-        contentRoot.append(
-          $('<div>').attr('class', 'tweet').append(
-            $('<span>').append(
-              $('<a>').attr(
-                'href',
-                'http://twitter.com/' + tweet.user.screen_name
-              ).text('@' + tweet.user.name)
-            ),
-            $('<div>').text(tweet.text)
-          )
-        );
-      });
-    });
+    twitter.fetchTimelines(root);
   } else {
-    $('#twitter-login > a').click(function() { twitter.login() });
+    loginFormElement.addEventListener("click", function() {
+      twitter.login();
+    });
   }
 })();

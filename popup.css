@@ -1,5 +1,14 @@
-body {
+* {
   font-size: 12px;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
 }
 
 #twitter-login {
@@ -17,14 +26,55 @@ body {
 }
 
 #content {
-  width: 300px;
-  margin: 10px 10px;
+  width: 400px;
 }
 
-#content > .tweet {
-  margin: 10px;
+#tweets {
+  width: 380px;
 }
 
-#content > .tweet > div {
-  margin: 5px;
+#tweets > .tweet {
+  clear: both;
+  width: 350px;
+  padding: 10px;
+}
+
+#tweets > .tweet > .tweet-icon {
+  float: left;
+  width: 50px;
+}
+
+#tweets > .tweet > .tweet-detail {
+  float: right;
+  width: 280px;
+  margin-left: 10px;
+}
+
+#tweets > .tweet > .tweet-info {
+  float: right;
+  padding: 5px 0px;
+}
+
+#tweets > .tweet > .tweet-info > ul {
+  padding-left: 0px;
+}
+
+#tweets > .tweet > .tweet-info > ul > li {
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+
+#tweets > .tweet > .retweet-info {
+  float: right;
+}
+
+.retweet-icon {
+  width: 18px;
+  height: 14px;
+  margin: 0px 5px;
+  display: inline-block;
+  vertical-align: text-top;
+  background-image: url(https://si0.twimg.com/a/1344029401/t1/img/twitter_web_sprite_icons.png);
+  background-position: -60px -350px;
 }

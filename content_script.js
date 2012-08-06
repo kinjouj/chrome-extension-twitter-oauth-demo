@@ -1,9 +1,7 @@
-var pin = document.querySelector('div#oauth_pin > p > kbd > code');
+var pin = prompt("表示されているPINコードを入力してください");
 
-if ((pin !== undefined && pin !== null) && /^\d{7}$/.test(pin.innerText)) {
-  chrome.extension.sendRequest({ "verifier": pin.innerText });
+chrome.extension.sendRequest({ "verifier": pin });
 
-  if (confirm("ウィンドウ閉じますか?")) {
-    window.close();
-  }
+if (confirm("ウィンドウ閉じますか?")) {
+  window.close();
 }

@@ -1,22 +1,24 @@
 {
-  "name": "test",
+  "name": "chrome-extension-twitter-oauth-demo",
+  "description": "Chrome Extension Twitter OAuth Demo (using oauth.js)",
   "version": "0.1",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["https://api.twitter.com/oauth/authorize"],
       "js": ["content_script.js"],
-      "run_at": "document_end"
+      "run_at": "document_idle"
     }
   ],
   "browser_action": {
-    "default_title": "test",
+    "default_title": "Chrome Extension - Twitter OAuth Demo -",
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "background": {
     "scripts":  [
       "jquery.js",
+      "underscore.js",
       "sha1.js",
       "oauth.js",
       "const.js",
