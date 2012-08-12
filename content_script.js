@@ -1,4 +1,6 @@
-if (document.referrer.match(/oauth_consumer_key=([^&]+)/)) {
+var pinElement = document.querySelector("#oauth_pin > p > kbd > code");
+
+if (pinElement !== null && document.referrer.match(/oauth_consumer_key=([^&]+)/)) {
   if (RegExp.$1 === CONSUMER_KEY) {
     var pin = prompt("表示されているPINコードを入力してください");
 
