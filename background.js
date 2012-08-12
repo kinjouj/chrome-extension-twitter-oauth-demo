@@ -8,6 +8,6 @@ function getTwitterAPI() {
   return api;
 }
 
-chrome.extension.onRequest.addListener(function(req, sender) {
-  getTwitterAPI().sign(req.verifier);
+chrome.extension.onRequest.addListener(function(req, sender, res) {
+  getTwitterAPI().sign(req.verifier, res);
 });

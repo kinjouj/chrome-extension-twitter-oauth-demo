@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["https://api.twitter.com/oauth/authorize"],
-      "js": ["content_script.js"],
+      "js": ["const.js", "content_script.js"],
       "run_at": "document_idle"
     }
   ],
@@ -17,10 +17,10 @@
   },
   "background": {
     "scripts":  [
-      "jquery.js",
-      "underscore.js",
-      "sha1.js",
-      "oauth.js",
+      "library/jquery.js",
+      "library/underscore.js",
+      "library/sha1.js",
+      "library/oauth.js",
       "const.js",
       "twitter.js",
       "background.js"

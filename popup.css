@@ -2,27 +2,27 @@
   font-size: 12px;
 }
 
-body {
-  margin: 0px;
-}
-
 a {
+  font-size: 14px;
   color: blue;
   text-decoration: none;
 }
 
 #twitter-login {
+  background: #3588cc;
   text-align: center;
   margin: 20px;
+  padding: 10px;
+  display: none;
 }
 
-#twitter-login > a {
-  background: #3588cc;
+#twitter-login > button {
   padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
+  border: 0px;
+  background: #3588cc;
+  background-clip: padding-box;
+  font-size: 20px;
   color: white;
-  text-decoration: none;
 }
 
 #content {
@@ -34,7 +34,6 @@ a {
 }
 
 #tweets > .tweet {
-  clear: both;
   width: 350px;
   padding: 10px;
 }
@@ -47,7 +46,13 @@ a {
 #tweets > .tweet > .tweet-detail {
   float: right;
   width: 280px;
-  margin-left: 10px;
+  margin: 10px;
+}
+
+#tweets > .tweet > .tweet-detail > pre {
+  word-wrap: break-word;
+  line-height: 18px;
+  margin: 5px 0px;
 }
 
 #tweets > .tweet > .tweet-info {
@@ -65,6 +70,10 @@ a {
   margin-right: 5px;
 }
 
+#tweets > .tweet > .tweet-info > ul > li > a {
+  font-size: 12px;
+}
+
 #tweets > .tweet > .retweet-info {
   float: right;
 }
@@ -77,4 +86,10 @@ a {
   vertical-align: text-top;
   background-image: url(https://si0.twimg.com/a/1344029401/t1/img/twitter_web_sprite_icons.png);
   background-position: -60px -350px;
+}
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: block;
 }
