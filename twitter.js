@@ -115,6 +115,8 @@ Twitter.prototype.sign = function(pin, cb) {
       var params = this.parseToken(data);
 
       this.save(params.oauth_token, params.oauth_token_secret, params.user_id);
+
+      cb(true);
     }, this),
     "error": function(xhr, status, error) {
       cb(false);
