@@ -1,6 +1,3 @@
-const ACCESS_TOKEN_STORAGE_KEY = "429294900-XSoiR7nAXRSC4Pj8HCSERrdQaJyM4QChsYRRGBbN";
-const ACCESS_TOKEN_SECRET_STORAGE_KEY = "ukpebmbLxrdW4ECUm8uGs1aNZ0N0cv3BNIe8u9xiHk";
-
 const TWITTER_USER_ID_STORAGE_KEY = "userid";
 
 var Twitter = function() {};
