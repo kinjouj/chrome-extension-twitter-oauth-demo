@@ -2,11 +2,11 @@ var pinElement = document.querySelector("#oauth_pin > p > kbd > code");
 
 if (pinElement !== null && document.referrer.match(/oauth_consumer_key=([^&]+)/)) {
   if (RegExp.$1 === CONSUMER_KEY) {
-    var pin = prompt("表示されているPINコードを入力してください");
+    var pin = prompt("Enter the PIN displayed by Twitter");
 
     chrome.extension.sendRequest({ "verifier": pin }, function(isSuccess) {
       if (isSuccess === true) {
-        alert("認証完了");
+        alert("Authorized, woot!");
       }
     });
   }
