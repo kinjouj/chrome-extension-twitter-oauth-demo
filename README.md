@@ -1,5 +1,12 @@
 # Chrome Extension + Twitter OAuth(using oauth.js) API Demonstration
 
+
+### ATTENSION
+
+
+This repository is deprecated.
+
+
 ### requirements
 
 jquery.js

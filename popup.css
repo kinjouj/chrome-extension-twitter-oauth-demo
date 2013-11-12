@@ -10,19 +10,10 @@ a {
 
 #twitter-login {
   background: #3588cc;
-  text-align: center;
   margin: 20px;
-  padding: 10px;
-  display: none;
-}
-
-#twitter-login > button {
-  padding: 10px;
-  border: 0px;
-  background: #3588cc;
-  background-clip: padding-box;
-  font-size: 20px;
+  padding: 20px;
   color: white;
+  display: none;
 }
 
 #content {

@@ -134,7 +134,7 @@ Twitter.prototype.isAuthenticated = function() {
 Twitter.prototype.fetchTimelines = function(elm) {
   var message = {
     "method": "GET",
-    "action": "https://api.twitter.com/1/statuses/home_timeline.json",
+    "action": "https://api.twitter.com/1.1/statuses/home_timeline.json",
     "parameters": {
       "oauth_consumer_key": CONSUMER_KEY,
       "oauth_signature_method": "HMAC-SHA1",

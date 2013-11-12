@@ -3,7 +3,7 @@
   var twitter = bgPage.getTwitterAPI();
 
   var loginFormElement = document.querySelector("#twitter-login");
-  loginFormElement.querySelector("button").addEventListener("click", function() {
+  loginFormElement.addEventListener("click", function() {
     twitter.login();
   });
 
